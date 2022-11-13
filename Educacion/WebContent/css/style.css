@@ -1,0 +1,32 @@
+.fondo-login{
+    background-image: url(../img/login-dark.jpg);
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+.fondo{
+    box-sizing: border-box;
+    display: grid;
+    background-color:white;
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+.btn-login{
+    display: grid;
+    justify-content: center;
+}
+.box-img{
+    display: grid;
+    place-items: center;
+}
+.fondo-menu{
+    /* height: 10vh; */
+    display: grid;
+    place-items: center;
+    height: 85vh;
+    background-image: url(../img/fondo-menu.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
