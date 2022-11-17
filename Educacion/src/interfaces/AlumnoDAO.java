@@ -10,6 +10,7 @@ public interface AlumnoDAO {
 	public int actualizarAlumno(AlumnoDTO obj);
 	public int eliminarAlumno(int cod);
 	public AlumnoDTO buscarAlumno(int cod);
+	public List<AlumnoDTO> buscarAlumnoxcod(int cod);
 	
 }
 
