@@ -20,6 +20,13 @@
             <h2>Alumnos</h2>
             <a href="registrarAlumnos.jsp" class="btn btn-primary m-2">Registrar</a>
         </div>
+	 <form action="ServletAlumno?tipo=buscarcod" id="frmbuscarcod"
+		method="post" class="row g-4">
+		<div class="col-auto">
+			<input type="text" name="cod1" class="form-control"
+				placeholder="Ingrese codigo"> <input type="submit" value="Consultar" class="btn btn-warning">
+		</div>
+	</form>	
     	<div>
         <table class="table text-center">
 	<tr>
