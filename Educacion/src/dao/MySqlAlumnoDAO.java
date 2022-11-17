@@ -145,6 +145,59 @@ public class MySqlAlumnoDAO implements AlumnoDAO {
 		}
 		return obj;
 	}
+	
+	//----------------------------------------------------------------------------------------------------------
+	
+	@Override
+	public List<AlumnoDTO> buscarAlumnoxcod(int cod) {
+		AlumnoDTO alu = null;
+		List<AlumnoDTO> data = new ArrayList<AlumnoDTO>();
+		Connection cn = null;
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		
+		try {
+			cn = MySqlDBConexion.getConexion();
+			String sql = "select * from alumno where idalumno=?";
+			pstm = cn.prepareStatement(sql);
+			pstm.setInt(1, cod);
+			rs = pstm.executeQuery();
+			if (rs.next()) {
+				alu = new AlumnoDTO();
+				alu.setIdAlumno(rs.getInt(1));
+				alu.setNombres(rs.getString(2));
+				alu.setApellidos(rs.getString(3));
+				alu.setDNI(rs.getString(4));
+				alu.setFechaNacimiento(rs.getDate(5));
+				alu.setSexo(rs.getString(6));
+				alu.setCiudad(rs.getString(7));
+				alu.setDireccion(rs.getString(8));
+				alu.setFechaRegistro(rs.getDate(9));
+				data.add(alu);
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (pstm != null) {
+					pstm.close();
+				}
+				if (cn != null) {
+					cn.close();
+				}
+			}
+			catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return data;
+	}
+
 
 }
 
