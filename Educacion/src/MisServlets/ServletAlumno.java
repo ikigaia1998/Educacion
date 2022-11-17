@@ -56,6 +56,14 @@ public class ServletAlumno extends HttpServlet {
 			actualizar(request, response);
 		else if (xtipo.equals("eliminar"))
 			eliminar(request, response);
+		else if (xtipo.equals("buscarcod"))
+			buscarcod(request, response);
+	}
+	
+	private void buscarcod(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int cod = Integer.parseInt(request.getParameter("cod1"));
+		request.setAttribute("data", serviAlumno.buscaAlumnoxcod(cod));
+		request.getRequestDispatcher("listaAlumnos.jsp").forward(request, response);
 	}
 
 	private void eliminar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
