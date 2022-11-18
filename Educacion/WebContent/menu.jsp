@@ -81,7 +81,7 @@
                   Matricula
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Crear Matricula</a></li>
+                  <li><a class="dropdown-item" href="ServletMatricula?tipo=listar">Crear Matricula</a></li>
                   <li><a class="dropdown-item" href="#">Consulta y Reporte</a></li>
                 </ul>
               </li>

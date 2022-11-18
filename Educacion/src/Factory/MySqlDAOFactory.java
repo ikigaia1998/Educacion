@@ -2,7 +2,7 @@ package Factory;
 
 import dao.MySqlAlumnoDAO;
 import dao.MySqlApoderadoDAO;
-
+import dao.MySqlMatriculaDAO;
 import dao.MySqlProfesorDAO;
 import dao.MySqlUsuarioDAO;
 import interfaces.AlumnoDAO;
@@ -10,6 +10,7 @@ import interfaces.AlumnoDAO;
 import interfaces.ProfesorDAO;
 import interfaces.UsuarioDao;
 import interfaces.ApoderadoDAO;
+import interfaces.MatriculaDAO;
 
 public class MySqlDAOFactory extends DAOFactory {
 
@@ -36,5 +37,11 @@ public class MySqlDAOFactory extends DAOFactory {
 	public ApoderadoDAO getApoderado() {
 		// TODO Auto-generated method stub
 		return new MySqlApoderadoDAO();
+	}
+
+	@Override
+	public MatriculaDAO getMatricula() {
+		// TODO Auto-generated method stub
+		return new MySqlMatriculaDAO();
 	}
 }

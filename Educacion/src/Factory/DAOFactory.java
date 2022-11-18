@@ -4,6 +4,7 @@ import interfaces.AlumnoDAO;
 
 import interfaces.UsuarioDao;
 import interfaces.ApoderadoDAO;
+import interfaces.MatriculaDAO;
 import interfaces.ProfesorDAO;
 
 public abstract class DAOFactory {
@@ -20,6 +21,7 @@ public abstract class DAOFactory {
 	public abstract UsuarioDao getUsuario();
 	public abstract ProfesorDAO getProfesor();
 	public abstract ApoderadoDAO getApoderado();
+	public abstract MatriculaDAO getMatricula();
 	
 	//con que fabrica vas a salir
 	public static DAOFactory getDAOFactory(int whichFactory) {
