@@ -130,5 +130,51 @@ public class MySqlMatriculaDAO implements MatriculaDAO {
 		}
 		return obj;
 	}
+	
+	@Override
+	public List<MatriculaDTO> buscarMatriculaxcod(int cod) {
+		MatriculaDTO obj = null;
+		List<MatriculaDTO> data = new ArrayList<MatriculaDTO>();
+		Connection cn = null;
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		
+		try {
+			cn = MySqlDBConexion.getConexion();
+			String sql = "select * from matricula where idmatricula=?";
+			pstm = cn.prepareStatement(sql);
+			pstm.setInt(1, cod);
+			rs = pstm.executeQuery();
+			if (rs.next()) {
+				obj = new MatriculaDTO();
+				obj.setIdMatricula(rs.getInt(1));
+				obj.setNombreApo(rs.getString(2));
+				obj.setNombreAlu(rs.getString(3));
+				obj.setDescripCurso(rs.getString(4));
+				obj.setPago(rs.getDouble(5));
+				data.add(obj);
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (pstm != null) {
+					pstm.close();
+				}
+				if (cn != null) {
+					cn.close();
+				}
+			}
+			catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return data;
+	}
 
 }
