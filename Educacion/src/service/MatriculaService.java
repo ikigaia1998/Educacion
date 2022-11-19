@@ -31,5 +31,9 @@ public class MatriculaService {
 	public int eliminaMatricula(int cod) {
 		return objPro.eliminarMatricula(cod);
 	}
+	
+	public List<MatriculaDTO> buscaMatriculaxcod(int cod) {
+		return objPro.buscarMatriculaxcod(cod);
+	}
 
 }
