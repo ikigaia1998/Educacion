@@ -10,5 +10,6 @@ public interface MatriculaDAO {
 	public int actualizarMatricula(MatriculaDTO obj);
 	public int eliminarMatricula(int cod);
 	public MatriculaDTO buscarMatricula(int cod);
+	public List<MatriculaDTO> buscarMatriculaxcod(int cod);
 
 }
