@@ -21,28 +21,37 @@
 			<h2>Registrar Matricula</h2>
 			<div class="mb-3">
 			<tr>
-				<td>Marca:</td>
+				<td>Apoderado:</td>
 				<td><select name="cbo_apoderado" onChange="combo(this, demo)">
 						<option value="1">Jorge</option>
-						<option value="2">Juan</option>
+						<option value="2">Lucho</option>
+						<option value="3">Monica</option>
+						<option value="4">Rosa</option>
+						<option value="5">Paola</option>
 				</select></td>
 			</tr>
 			</div>
 			<div class="mb-3">
 			<tr>
-				<td>Marca:</td>
+				<td>Alumno:</td>
 				<td><select name="cbo_alumno" onChange="combo(this, demo)">
-						<option value="1">Bruno</option>
+						<option value="1">Juan</option>
 						<option value="2">Pepe</option>
+						<option value="3">Maria</option>
+						<option value="4">Paula</option>
+						<option value="5">Arturo</option>
 				</select></td>
 			</tr>
 			</div>
 			<div class="mb-3">
 			<tr>
-				<td>Marca:</td>
+				<td>Curso:</td>
 				<td><select name="cbo_curso" onChange="combo(this, demo)">
 						<option value="1">Matemática</option>
 						<option value="2">Comunicación</option>
+						<option value="3">Algebra</option>
+						<option value="4">Geometria</option>
+						<option value="5">Historia</option>
 				</select></td>
 			</tr>
 			</div>
